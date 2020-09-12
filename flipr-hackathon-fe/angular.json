@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "flipr-hackathon-fe": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "flipr-hackathon-fe"
+    }
+  },
+  "defaultProject": "flipr-hackathon-fe",
+  "cli": {
+    "analytics": "326960fa-6713-454e-a65f-765650e449b1"
+  }
 }
