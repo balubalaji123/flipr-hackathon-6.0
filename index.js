@@ -9,13 +9,13 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-app.use(express.static(path.join(__dirname,'/flipr-hackathon-fe/dist/flipr-hackathon-fe')))
+app.use(express.static(path.join(__dirname,'/dist/flipr-hackathon-fe')))
 
 // app.get('/',function(req,res){
 //     res.send("it's working")
 // })
 app.get('/*',function(req,res){
-    res.sendFile(__dirname+'/flipr-hackathon-fe/dist/flipr-hackathon-fe/index.html')
+    res.sendFile(__dirname+'/dist/flipr-hackathon-fe/index.html')
 })
 app.listen(process.env.PORT || 4200,()=>{ 
     console.log(`serving website `);
