@@ -6,16 +6,20 @@
 }
 
 .topnav{
+    padding-top:10px;
     background-color:white;
     display: grid;
-    grid-template-columns:40% repeat(5,1fr) ;
+    grid-template-columns:40% repeat(5,1fr);
+    color: #6583C0;
+    font-weight: bolder;
 }
 
 .container{
-    background-color: aquamarine;
+    background-color: #E2E5EC;
 }
 
 .covid{
-    padding-left: 10px;
-    
+    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 2% 90%;
 }
