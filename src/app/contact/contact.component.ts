@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ApiServiceService} from '../api-service.service'
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(private apiService:ApiServiceService) { }
 
   ngOnInit(): void {
+    this.apiService.contact_details().subscribe(
+      (data)=>{
+        console.log("*****api data****\n",data);
+      },
+      (err)=>{
+        console.log(err)
+      }
+    )
   }
 
   public i1 = 0;
