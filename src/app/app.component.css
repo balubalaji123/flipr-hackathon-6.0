@@ -1,0 +1,21 @@
+.page{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-rows: 8% 92%;
+}
+
+.topnav{
+    background-color:white;
+    display: grid;
+    grid-template-columns:40% repeat(5,1fr) ;
+}
+
+.container{
+    background-color: aquamarine;
+}
+
+.covid{
+    padding-left: 10px;
+    
+}
