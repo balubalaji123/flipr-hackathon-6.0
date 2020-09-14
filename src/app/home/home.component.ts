@@ -10,10 +10,13 @@ export class HomeComponent implements OnInit {
 
   constructor(private apiService: ApiServiceService) { }
 
+  public data
   ngOnInit(): void {
     this.apiService.getSocialMediaInfo().subscribe(
       (data) => {
         console.log("data", data)
+        this.data = data.data.contacts.primary;
+        console.log(this.data)
       },
       (err) => {
         console.log(err);
@@ -21,12 +24,6 @@ export class HomeComponent implements OnInit {
     )
   }
 
-  data = {
-    "number": "+91-11-23978046",
-    "number-tollfree": "1075",
-    "email": "ncov2019@gov.in",
-    "twitter": "https://twitter.com/MoHFW_INDIA",
-    "facebook": "https://www.facebook.com/MoHFWIndia",
-  }
+  
 
 }

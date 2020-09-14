@@ -15,18 +15,22 @@
         <div class="card-button">
               <mat-card style="width: 250px;background-color: #D5D7E3;">{{data.number}}</mat-card>
               <div class="button">
-              <button mat-raised-button style="background-color: #6F32BE;color: white;"><img src="../../assets/call.svg" alt=""></button>
-              </div>
-              <mat-card style="width: 250px;background-color: #D5D7E3;">{{data.email}}</mat-card>
-              <div class="button">
-              <button mat-raised-button style="background-color: #6F32BE;color: white;"><img src="../../assets/mail.svg" alt=""></button>
+              <button mat-raised-button style="background-color: #6F32BE;color: white;"><a href="{{data.number}}" target="blank"><img src="../../assets/call.svg" alt=""></a></button>
               </div>
         </div>
         <div class="card-button">
-            <mat-card style="width: 250px;background-color: #D5D7E3;">+91-11-239 780 46</mat-card>
+            <mat-card style="width: 250px;background-color: #D5D7E3;">{{data.email}}</mat-card>
             <div class="button">
-            <button mat-raised-button style="background-color: #6F32BE;color: white;">C19-HelpLine</button>
+            <button mat-raised-button style="background-color: #6F32BE;color: white;"><a href="{{data.email}}" target="blank"><img src="../../assets/mail.svg" alt=""></a></button>
             </div>
+        </div>
+
+        <div class="card-button">
+            
+            <mat-card style="width: 250px;background-color: #D5D7E3;">{{data.facebook}}</mat-card>
+            <div class="button">
+            <button mat-raised-button style="background-color: #6F32BE;color: white;"><a href="{{data.facebook}}" target="blank"><img src="../../assets/fb.svg" alt=""></a></button>
+            </div> 
         </div>
 
     </div>
