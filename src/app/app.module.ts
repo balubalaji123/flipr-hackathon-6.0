@@ -7,18 +7,25 @@ import {HttpClientModule} from '@angular/common/http'
 import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import { NotificationComponent } from './notification/notification.component';
+import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    NotificationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatButtonModule,
+    MatInputModule,
+    MatCardModule,
     HttpClientModule,
-    MatButtonModule
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent]
