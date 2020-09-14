@@ -16,7 +16,7 @@
             <tr *ngFor="let t of table_data">
                 <td>{{t.date}}</td>
                 <td>{{t.notif}}</td>
-                <td>{{t.link}}</td>
+                <td><a href="{{t.link}}" target="blank">{{t.link}}</a></td>
             </tr>
         </table>
     </div>
