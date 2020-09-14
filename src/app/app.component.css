@@ -9,7 +9,7 @@
     padding-top:10px;
     background-color:white;
     display: grid;
-    grid-template-columns:55% repeat(5,auto) 5%;
+    grid-template-columns:55% repeat(4,auto) 5%;
     color: #6583C0;
     font-weight: bolder;
 }
