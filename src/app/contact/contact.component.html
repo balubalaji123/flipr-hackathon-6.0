@@ -1,0 +1,28 @@
+<div class="page">
+    <div class="head" style="font-weight: bolder;">
+        <span style="border-bottom:6px solid #343049;">Cont</span><span>act and Helpline</span>
+    </div>
+    <div class="down">
+        <div class="table">
+            <table class="t">
+                <tr>
+                    <th>State Name</th>
+                    <th>Helpline Number</th>
+                </tr>
+                <tr *ngFor = "let t of table_data">
+                    <td>{{t.loc}}</td>
+                    <td>{{t.number}}</td>
+                </tr>
+            </table>
+            <div class="buttons" style="text-align:end;padding-right: 15%;padding-top:2%">
+                <button (click)=prev_col() style="background-color: #BDCAE4; " mat-raised-button>Prev</button>
+                <button (click)=next_col() mat-raised-button>Next</button>
+            </div>
+            
+        </div>
+        <div class="image">
+            <img src="../../assets/Group 11.png" alt="no-img" height="80%" width="80%">
+        </div>
+    </div>
+
+</div>

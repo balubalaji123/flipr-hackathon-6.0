@@ -1,11 +1,14 @@
 <div class="page">
     <div class="topnav">
-        <div class="covid"><span style="border-left:10px solid black;">Covid-19</span></div>
-        <div class="contact"><button (click)="onclick()">2</button></div>
-        <div class="home">3</div>
-        <div class="notification">4</div>
-        <div class="hospital">5</div>
-        <div class="graph">6</div>
+        <div class="covid">
+            <div style="height: 30px;width: 12px;background-color: #1B3568;"></div>
+            <div style="padding-top: 5px;padding-left:8px;"><b>Covid-19</b></div>
+        </div>
+        <div style="padding-top: 5px;" (click)="onclick()" class="contact"><a routerLink ="contact">Contact</a></div>
+        <div style="padding-top: 5px;" class="home"><a routerLink="home">Home</a></div>
+        <div style="padding-top: 5px;" class="notification">Notifications</div>
+        <div style="padding-top: 5px;" class="hospital">Hospital</div>
+        <div style="padding-top: 5px;" class="graph">Graph</div>
     </div>
     <div class="container">
         <router-outlet></router-outlet>
