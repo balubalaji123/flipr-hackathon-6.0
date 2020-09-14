@@ -10,6 +10,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { NotificationComponent } from './notification/notification.component';
 import {MatCardModule} from '@angular/material/card';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 
 @NgModule({
@@ -26,6 +28,7 @@ import {MatCardModule} from '@angular/material/card';
     MatInputModule,
     MatCardModule,
     HttpClientModule,
+    MatProgressSpinnerModule
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent]

@@ -15,3 +15,10 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.loader{
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width:100% !important;
+  height: 100% !important;
+}
