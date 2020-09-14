@@ -14,6 +14,8 @@ export class ContactComponent implements OnInit {
     this.apiService.contact_details().subscribe(
       (data)=>{
         console.log("*****api data****\n",data);
+        this.data=data;
+        
       },
       (err)=>{
         console.log(err)
@@ -23,6 +25,7 @@ export class ContactComponent implements OnInit {
 
   public i1 = 0;
   public i2 = 10;
+  public data;
 
   prev_col(){
     if(this.i1==0){
