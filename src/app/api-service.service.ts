@@ -5,13 +5,13 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiServiceService {
-
-  private contact_url: string = 'http://localhost:3000/contact'
-  private notification_url: string = 'http://localhost:3000/notification'
-  private hospitalbeds_url: string = 'http://localhost:3000/dashboard/hospital-beds'
-  private collegebeds_url: string = 'http://localhost:3000/dashboard/medicalcollege-beds'
+  public server_url='https://flipr-hackathon-be.herokuapp.com';
+  private contact_url: string = `${this.server_url}/contact`
+  private notification_url: string = `${this.server_url}/notification`
+  private hospitalbeds_url: string = `${this.server_url}/dashboard/hospital-beds`
+  private collegebeds_url: string = `${this.server_url}/dashboard/medicalcollege-beds`
   private deceased_url: string = ''
-  private socialmedia_url = 'http://localhost:3000/contact/contact-details';
+  private socialmedia_url = `${this.server_url}/contact/contact-details`;
 
   constructor(private http: HttpClient) {
 
