@@ -13,8 +13,8 @@ import {MatCardModule} from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { HospitalsComponent } from './hospitals/hospitals.component';
 import { GraphsComponent } from './graphs/graphs.component';
-
-
+import {MatSelectModule} from '@angular/material/select';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,9 @@ import { GraphsComponent } from './graphs/graphs.component';
     MatInputModule,
     MatCardModule,
     HttpClientModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatSelectModule,
+    FormsModule
   ],
   providers: [ApiServiceService],
   bootstrap: [AppComponent]
