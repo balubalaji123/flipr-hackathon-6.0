@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import{Chart} from 'chart.js'
+import * as XLSX from 'xlsx';
+
 @Component({
   selector: 'app-graphs',
   templateUrl: './graphs.component.html',
@@ -8,6 +10,8 @@ import{Chart} from 'chart.js'
 export class GraphsComponent implements OnInit {
 
   constructor() { }
+
+
 
   ngOnInit(): void {
     var ctx = document.getElementById('myChart').getContext('2d');

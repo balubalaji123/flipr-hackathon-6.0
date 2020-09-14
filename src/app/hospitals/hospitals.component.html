@@ -1,20 +1,70 @@
 <div class="container">
     <div class="heading">
-        Hospitals DashBoard
+        <span style="border-bottom: #343049 5px solid;">Hosp</span><span>itals Dashboard</span>
     </div>
     <div class="options">
-        options 
+        <div *ngIf="selected_table==='hospitals'" class="buttons" style="text-align:end;padding-right: 5%;padding-top:1%">
+            <button style="background-color: rgb(52,48,73);color: white;" (click)="table_change('hospitals')" mat-raised-button>Hospitals</button> &nbsp;
+            <button style="background-color: rgb(52,48,73);color: white;opacity: 0.6;" (click)="table_change('colleges')" mat-raised-button>Colleges</button>
+        </div>
+        <div *ngIf="selected_table==='colleges'" class="buttons" style="text-align:end;padding-right: 5%;padding-top:1%">
+              <select class="select" [ngModel]="selected_state" (ngModelChange)="onChange_state($event)" name="state" >
+                <option class="option" *ngFor="let s of states" [value]="s">{{s}}</option>
+              </select>
+              <select class="select" [ngModel]="selected_type" (ngModelChange)="onChange_type($event)" name="type" >
+                <option class="option" *ngFor="let t of types" [value]="t">{{t}}</option>
+              </select>
+            <button style="background-color: rgb(52,48,73);color: white;opacity: 0.6;" (click)="table_change('hospitals')" mat-raised-button>Hospitals</button> &nbsp;
+            <button style="background-color: rgb(52,48,73);color: white;" (click)="table_change('colleges')" mat-raised-button>Colleges</button>
+        </div>
     </div>
     <div class="table">
-        <table class="t">
+        <table *ngIf="selected_table==='hospitals'" class="t">
             <tr>
                 <th>State</th>
                 <th>Rural Hospitals</th>
                 <th>Rural Beds</th>
                 <th>Urban Hospitals</th>
                 <th>Urban Beds</th>
-                
+                <th>Total Hospitals</th>
+                <th>Total Beds</th> 
+            </tr>
+            <tr *ngFor="let t of table_data">
+                <td>{{t.state}}</td>
+                <td>{{t.ruralHospitals}}</td>
+                <td>{{t.ruralBeds}}</td>
+                <td>{{t.urbanHospitals}}</td>
+                <td>{{t.urbanBeds}}</td>
+                <td>{{t.totalHospitals}}</td>
+                <td>{{t.totalBeds}}</td>
             </tr>
         </table>
+        <table *ngIf="selected_table==='colleges'  && table_data1.length" class="t">
+            <tr>
+                <th>State Name</th>
+                <th style="font-size:small">Institute</th>
+                <th>City</th>
+                <th>Type</th>
+                <th>Admission Capacity</th>
+                <th>Hospital Beds</th>
+            </tr>
+            <tr *ngFor="let t of table_data1">
+                <td>{{t.state}}</td>
+                <td>{{t.name}}</td>
+                <td>{{t.city}}</td>
+                <td>{{t.ownership}}</td>
+                <td>{{t.admissionCapacity}}</td>
+                <td>{{t.hospitalBeds}}</td>
+            </tr>
+        </table>
+        <div *ngIf="selected_table==='hospitals'" class="buttons" style="text-align:end;padding-right: 5%;padding-top:1%">
+            <button (click)=prev_col() style="background-color: #BDCAE4; " mat-raised-button>Prev</button> &nbsp;
+            <button (click)=next_col() mat-raised-button>Next</button>
+        </div>
+
+        <div *ngIf="selected_table==='colleges' && api_fil.length>10" class="buttons" style="text-align:end;padding-right: 5%;padding-top:1%">
+            <button (click)=prev_col() style="background-color: #BDCAE4; " mat-raised-button>Prev</button> &nbsp;
+            <button (click)=next_col() mat-raised-button>Next</button>
+        </div>
     </div>
 </div>
