@@ -17,7 +17,7 @@
     padding-right: 32%;
     /* border: 2px solid violet; */
     display: grid;
-    grid-template-rows: 40% 20% 40%;
+    grid-template-rows: 40% 20% 10% 10%;
 }
 
 .heading{

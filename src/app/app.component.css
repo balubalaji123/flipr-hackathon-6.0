@@ -9,7 +9,7 @@
     padding-top:10px;
     background-color:white;
     display: grid;
-    grid-template-columns:40% repeat(5,1fr);
+    grid-template-columns:55% repeat(5,auto) 5%;
     color: #6583C0;
     font-weight: bolder;
 }
@@ -22,4 +22,10 @@
     padding-left: 30px;
     display: grid;
     grid-template-columns: 2% 90%;
+}
+
+a{
+    text-decoration:none;
+    float: right;
+    /* padding-right:15% ; */
 }

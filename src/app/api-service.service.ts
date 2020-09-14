@@ -32,7 +32,7 @@ export class ApiServiceService {
     return this.http.get(this.collegebeds_url);       
   }
   getdeceasedcount(){
-    return this.http.get(this.deceased_url)
+    return this.http.get(this.deceased_url);
   }
 
 }

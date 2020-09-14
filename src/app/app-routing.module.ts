@@ -5,6 +5,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { NotificationComponent } from './notification/notification.component';
 import { HospitalsComponent } from './hospitals/hospitals.component';
+import { GraphsComponent } from './graphs/graphs.component';
 
 
 const routes: Routes = [
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'notification', component: NotificationComponent },
   { path: 'dashboard', component: HospitalsComponent},
+  { path: 'graph', component: GraphsComponent},
 ];
 
 @NgModule({
