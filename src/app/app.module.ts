@@ -11,6 +11,8 @@ import {MatInputModule} from '@angular/material/input';
 import { NotificationComponent } from './notification/notification.component';
 import {MatCardModule} from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { HospitalsComponent } from './hospitals/hospitals.component';
+import { GraphsComponent } from './graphs/graphs.component';
 
 
 
@@ -19,7 +21,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     AppComponent,
     ContactComponent,
     HomeComponent,
-    NotificationComponent
+    NotificationComponent,
+    HospitalsComponent,
+    GraphsComponent
   ],
   imports: [
     BrowserModule,
