@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import{Chart} from 'chart.js'
 import * as XLSX from 'xlsx';
-
+ 
 @Component({
   selector: 'app-graphs',
   templateUrl: './graphs.component.html',
