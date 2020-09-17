@@ -7,7 +7,7 @@ env:
         BUILD_FOLDER: "dist"
 phases:
   install:
-    runtime-versions:
+    runtime-versions: 
         nodejs: 10
     commands:
         - echo Installing source NPM dependencies...
